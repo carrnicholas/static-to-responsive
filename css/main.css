@@ -12,10 +12,10 @@ body {
 	font-size: 1em;
 }
 
-.container{
+.container {
 	max-width: 1200px;
 	/* margin: 0 auto; */
-	width: 100%;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -136,32 +136,21 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
+	width: 100%;
 	height: auto;
 	border-top: 1px solid #eee;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	text-align: center;
 }
 
 .section-one h4 {
 	padding: 10px 0;
-	justify-content: center;
-	align-items: center;
 }
-
- .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-} /* NOTE: Designed "mobile first, so this is only needed at the breakpoints
-section at the bottom!!" */
 
 .section-two h4,
 .section-three h4 {
 	padding: 10px 30px;
-	align-items: center;
-	justify-content: center;
 }
 
 
@@ -204,6 +193,7 @@ footer span {
 
 @media only screen and (min-with: 768px) {
 	.bottom-section {
+		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
 		border-top: 1px solid #c0c0c0;
@@ -212,6 +202,7 @@ footer span {
 	.section-one,
 	.section-two,
 	.section-three {
+		display: flex;
 		border-top: none;
 		flex-basis: 30%;
 	}
@@ -223,7 +214,8 @@ footer span {
 
 @media only screen and (min-width: 1200px) {
     header {
-        justify-content: space-between;
+			display: flex;
+      justify-content: space-between;
     }
 
     header h1 {
