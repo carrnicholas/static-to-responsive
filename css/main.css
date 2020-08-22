@@ -1,3 +1,5 @@
+/* NOTE: See long set of notes & comments at bottom explaining Flexbox */
+
 html {
 	font-size: 16px;
 }
@@ -13,9 +15,11 @@ body {
 .container{
 	max-width: 1200px;
 	/* margin: 0 auto; */
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -47,16 +51,22 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	border-bottom: 3px solid #77a466;
+	/* border-bottom: 3px solid #77a466; */
 	/* margin: 0 auto; */
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	flex-flow: row wrap;
+	text-align: center;
 }
 
 header h1 {
-	margin: 0;
+	/*margin: 0; */
 	padding: 38px 0;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	border-bottom: 3px solid #77a466;
 }
 header h1 span {
 	color: #77a466;
@@ -64,17 +74,26 @@ header h1 span {
 
 header nav {
 	padding: 46px 0;
+	width: 100%;
 }
 header nav ul {
-	margin: 0;
+	/* margin: 0; */
 	padding: 0;
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: space-between;
+	flex-wrap: wrap;
+	text-align: center;
+	line-height: 2.5em;
 }
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 14px;
 	padding: 0 10px;
-	display: inline;
+	width: 100%;
+	/* display: inline; */
 }
 header nav ul li a{
 	text-decoration: none;
@@ -87,7 +106,9 @@ header nav ul li a{
 	/* margin: 0 auto; */
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	width: 100%;
+	flex-flow: row wrap; /* made most of the things work!! Not sure how! */
 }
 
 .main-image {
@@ -118,10 +139,16 @@ header nav ul li a{
 	width: 33%;
 	height: auto;
 	border-top: 1px solid #eee;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	text-align: center;
 }
 
 .section-one h4 {
 	padding: 10px 0;
+	justify-content: center;
+	align-items: center;
 }
 
 .section-two {
@@ -132,7 +159,10 @@ header nav ul li a{
 .section-two h4,
 .section-three h4 {
 	padding: 10px 30px;
+	align-items: center;
+	justify-content: center;
 }
+
 
 .menu {
 	list-style: none;
@@ -162,12 +192,21 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 14px;
+}
+
+@media (min-with: 1200px) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	flex-flow: row wrap;
 }
 
 /*
@@ -204,3 +243,27 @@ flex-flow: [property]
 Mobile screens are UNDER 768px
 Tablet screens are 768px and 1199px
 Desktop is 1200px and higher
+
+====== MAJOR NOTES ON CSS AND FLEXBOX ======
+
+Since at the moment, I'm struggling with CSS, some notes...
+
+Only make things display: flex that have elements inside them that you want to
+mess with. So containers need to be flex items, navs need to be flex items.
+Things like h1s, h2s, etc don't because they don't have things inside them
+that need to be positioned.
+
+Sometimes you have to set the width of some things to be 100%, like headers,
+h1s, and footers. Also set the main flex container to 100%.
+
+Think of Flexbox as a set of divs that are empty squares...sometimes you have
+to use things like text-align to mess with the content inside the divs. Flexbox
+pretty much divides your screen into "boxes" and allows you to position those
+boxes how you want...but if there are elements inside the boxes that you need or
+want positioned (like the nav bar being centered with text-align, or the bottom
+sections of the site reviews/menu/contact being centered with text-align) you
+still have to write that CSS yourself.
+
+Bottom line: Flexbox does a lot for you, but it can't do everything for you!!
+
+Keep learning!!
