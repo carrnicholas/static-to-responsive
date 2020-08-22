@@ -158,3 +158,38 @@ footer span {
 	color: #77a466;
 	font-size: 14px;
 }
+
+/*
+
+====== CONVERT A SITE FROM STATIC TO RESPONSIVE ======
+
+1. Remove all floats, clears, fixed heights (Flexbox fixes this automatically)
+
+2. Center all your content
+Center the following... (add Flexbox styles to these two in step 5)
+
+body
+container
+header
+top-section
+bottom-section
+footer
+
+3. In the html tag, set the font-size property to 16px
+** Remember, 16px is the best practice size!
+
+4. In the body tag, set the font-size property to 1em
+
+5. Add your Flexbox styles for mobile
+** Remember...
+
+display: flex;
+justify-content: [property] (horizontal axis -- default) << main axis
+align-items: [property] (vertical axis -- default) << cross-axis
+flex-flow: [property]
+
+**Also remember...
+
+Mobile screens are UNDER 768px
+Tablet screens are 768px and 1199px
+Desktop is 1200px and higher
