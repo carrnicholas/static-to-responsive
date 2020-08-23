@@ -192,7 +192,7 @@ footer span {
 	font-size: 14px;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
 	.bottom-section {
 		display: flex;
 		justify-content: space-between;
@@ -212,31 +212,37 @@ footer span {
 	.section-two {
  	border-left: 1px solid #eee;
  	border-right: 1px solid #eee;
+}
+
 } /* close media */
 
 @media only screen and (min-width: 1200px) {
     header {
 			display: flex;
       justify-content: space-between;
-    }
+    } /* close header */
 
     header h1 {
         width: 30%;
         border-bottom: none;
         text-align: left;
-    }
+    } /* close h1 */
 
     header nav {
 			display: flex;
 			justify-content: space-between;
         width: 45%;
-    }
+    } /* close nav */
 
     header nav ul {
         display: flex;
         justify-content: space-between;
-    }
-}
+    } /* close nav ul */
+
+		header nav ul li {
+			display: inline-row;
+		} /* close nav ul li */
+} /* close media */
 /*
 
 ====== CONVERT A SITE FROM STATIC TO RESPONSIVE ======
