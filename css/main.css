@@ -191,7 +191,7 @@ footer span {
 	font-size: 14px;
 }
 
-@media only screen and (min-with: 768px) {
+@media only screen and (min-width: 768px) {
 	.bottom-section {
 		display: flex;
 		justify-content: space-between;
