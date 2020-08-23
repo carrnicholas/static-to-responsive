@@ -235,12 +235,14 @@ footer span {
     } /* close nav */
 
     header nav ul {
+				width: 100%;
         display: flex;
         justify-content: space-between;
     } /* close nav ul */
 
 		header nav ul li {
-			display: inline-row;
+			width: 100%;
+			flex-wrap: no-wrap;
 		} /* close nav ul li */
 } /* close media */
 /*
