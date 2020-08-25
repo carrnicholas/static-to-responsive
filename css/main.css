@@ -231,18 +231,17 @@ footer span {
     header nav {
 			display: flex;
 			justify-content: space-between;
-        width: 45%;
+			width: 45%;
     } /* close nav */
 
     header nav ul {
-				width: 100%;
         display: flex;
         justify-content: space-between;
     } /* close nav ul */
 
 		header nav ul li {
-			width: 100%;
-			flex-wrap: no-wrap;
+		/* no width needed per Sharon @ Skillcrush b/c if there is a width here
+		the links can't sit together on the same line */
 		} /* close nav ul li */
 } /* close media */
 /*
