@@ -83,7 +83,7 @@ header nav ul {
 	display: flex;
 	justify-content: flex-end;
 	align-items: space-between;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; -- REMOVE per Skillcrush for nav bar to display properly */
 	text-align: center;
 	line-height: 2.5em;
 }
@@ -92,8 +92,10 @@ header nav ul li {
 	font-weight: 700;
 	font-size: 14px;
 	padding: 0 10px;
-	width: 100%;
-	/* display: inline; */
+	/* width: 100%; -- need to remove 100% width from both the base (mobile) style
+	AND the desktop media query because if the width is in the base style then it
+	will be applied to all screens! /*
+	/* display: inline; -- REMOVE per Skillcrush; not needed because of Flexbox */
 }
 header nav ul li a{
 	text-decoration: none;
@@ -244,7 +246,15 @@ footer span {
 		the links can't sit together on the same line */
 		} /* close nav ul li */
 } /* close media */
+
 /*
+
+====== THE NAV BAR QUESTIONS ======
+
+I had a 100% width in the mobile and desktop versions -- that can't be there
+
+In the base (mobile) style, I told the nav bar to wrap -- that can't be there
+either!!
 
 ====== CONVERT A SITE FROM STATIC TO RESPONSIVE ======
 
