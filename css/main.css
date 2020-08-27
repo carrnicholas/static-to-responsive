@@ -144,7 +144,8 @@ header nav ul li a{
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	text-align: center;
+	/* text-align: center; -- REMOVE per Skillcrush...not sure why, probably
+	because Flexbox handles this for you */
 }
 
 .section-one h4 {
@@ -198,7 +199,8 @@ footer span {
 	.bottom-section {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		 /* align-items: center; -- REMOVE per Skillcrush, probably because Flexbox
+		 handles this for you */
 		border-top: 1px solid #c0c0c0;
 	}
 
@@ -206,7 +208,8 @@ footer span {
 	.section-two,
 	.section-three {
 		display: flex;
-		text-align: center;
+		/* text-align: center; -- REMOVE per Skillcrush...not sure why? Probably
+		because Flexbox handles this for you */
 		border-top: none;
 		flex-basis: 30%;
 	}
