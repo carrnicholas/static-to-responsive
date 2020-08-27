@@ -1,4 +1,5 @@
 /* NOTE: See long set of notes & comments at bottom explaining Flexbox */
+/* NOTE: See comments interspersed throughout the code for where I got lost */
 
 html {
 	font-size: 16px;
@@ -51,8 +52,8 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	/* border-bottom: 3px solid #77a466; */
-	/* margin: 0 auto; */
+	/* border-bottom: 3px solid #77a466; << not sure why commented out! */
+	/* margin: 0 auto; << probably not needed because of Flexbox */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -181,8 +182,9 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 footer {
 	border-top: 3px solid #eee;
-	/* margin: 0 auto;
-	text-align: center; */
+	/* margin: 0 auto << not sure why removed, Flexbox probably handles this;
+	text-align: center; -- REMOVED per Skillcrush, but earlier than other items,
+	like in .bottom-section...that was removed later! */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -255,9 +257,11 @@ footer span {
 ====== THE NAV BAR QUESTIONS ======
 
 I had a 100% width in the mobile and desktop versions -- that can't be there
+**For the nav bar
 
 In the base (mobile) style, I told the nav bar to wrap -- that can't be there
-either!!
+either!! Because things should be coded mobile first, you have to take the
+wrap out of the base code or it won't display properly!!
 
 ====== CONVERT A SITE FROM STATIC TO RESPONSIVE ======
 
